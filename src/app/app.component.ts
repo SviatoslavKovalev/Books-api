@@ -14,7 +14,7 @@ export class AppComponent {
 
  }
  search(){
-   this.http.get('https://api.itbook.store/1.0/search/' + this.userName)
+   this.http.get("https://cors.bridged.cc/https://api.itbook.store/1.0/search/" + this.userName)
    .subscribe((response)=>{
      this.response = response
      console.log(this.response)
