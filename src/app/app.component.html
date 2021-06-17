@@ -1,8 +1,11 @@
 <!-- <app-date></app-date> -->
 User name: <input type="text" [(ngModel)]="userName">
 <button (click) = "search()">Search</button>
-<div *ngIf="response">
-  <img src= "{{response.books.image}}" alt="">
-  <p>Имя : {{response.books}}</p>
+<div *ngFor="let book of response.books">
+  <img src= "{{book.image}}" alt="">
+  <p>Имя : {{book.title}}</p>
+  <p>Описание : {{book.subtitle}}</p>
+  <p>Цена : {{book.price}}</p>
+
   <!-- <p>Локация: {{response.html_url}}</p> -->
 </div>
